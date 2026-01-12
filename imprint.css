@@ -1,0 +1,61 @@
+@font-face {
+    font-family: RobotoMono;
+    src: url(assets/fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+html, body {
+    height: 100%;
+    overflow-y: hidden; /* verhindert vertikale Scrollbar */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom, blue, black);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    color: #00f4bf;
+    font-family: RobotoMono;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.backBtn{
+        color: #00f4bf;
+        font-family: RobotoMono;
+        text-decoration: none;
+        cursor: pointer;
+        padding-left: 30px;
+        padding-top: 30px;
+}
+
+.backBtn:hover{
+    color: #E15544;
+}
+
+.imprintClass{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px, solid, white;
+        border-radius: 15px;
+        padding: 20px;
+        padding-top: 0;
+}

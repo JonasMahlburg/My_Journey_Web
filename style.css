@@ -1,3 +1,100 @@
-header{
-    color: black;
+@font-face {
+    font-family: RobotoMono;
+    src: url(assets/fonts/RobotoMono-VariableFont_wght.ttf);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+/* allgemeines Body-Layout (bestehend) */
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, blue, black);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+    color: #00f4bf;
+    font-family: RobotoMono;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    color: #00f4bf;
+    text-decoration: none;
+}
+.link:hover{
+    color: #E15544;
+}
+
+.logo {
+    max-width: 350px;
+    max-height: 350px;
+    height: 100%;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.downloadImg {
+    cursor: not-allowed;
+}
+
+.image-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    /* scrollbar ausblenden */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carousel-container::-webkit-scrollbar { display: none; }
+
+.images {
+    flex: 0 0 auto;
+    width: min(300px, 80vw);
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid black; /* Komma entfernt */
+    scroll-snap-align: center;
+}
+
+figcaption{
+  text-align: center;
+}
+
+/*------------------------ Media-Querry ----------------------*/
+
+/* @media(max-width: 650px){
+    .logo{
+        max-width: 0px;
+        max-height: 300px;
+    }
+} */
